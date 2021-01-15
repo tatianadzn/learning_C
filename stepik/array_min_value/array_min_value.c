@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <inttypes.h>
+#include <stdlib.h>
 
 // Заполняет выделенный массив значениями, считанными со входа
 void array_int_fill( int64_t* array, size_t size ) {
