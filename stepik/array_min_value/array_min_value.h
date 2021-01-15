@@ -1,0 +1,6 @@
+#ifndef LEARNING_C_ARRAY_MIN_VALUE_H
+#define LEARNING_C_ARRAY_MIN_VALUE_H
+
+void perform();
+
+#endif //LEARNING_C_ARRAY_MIN_VALUE_H
