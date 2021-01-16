@@ -2,9 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../array_min_value/array_min_value.h"
+#include "../helper_functions/helper_functions.h"
 
-//helper
-size_t read_size() { size_t i; scanf("%zu", &i); return i; }
 
 
 // Считывает массив массивов со входа и возвращает его
@@ -19,7 +18,7 @@ int64_t** marray_read( size_t* rows, size_t** sizes ) {
 
     int64_t** marray = malloc(size * sizeof(int64_t));
     for (size_t i = 0; i < size; i++){
-        *(marray + i) = array_int_read(sizes_arr + i);
+        *(marray + i) = array_int64_read(sizes_arr + i);
     }
     return marray;
 }
@@ -57,7 +56,7 @@ int64_t* int64_ptr_min(int64_t* x, int64_t* y) {
 int64_t* marray_int_min( int64_t** marray, size_t const* sizes, size_t rows ) {
     int64_t* min = &marray[0][0];
     for (size_t i = 0; i < rows; i++){
-        int64_t* local_min = array_int_min(*(marray + i), *(sizes + i));
+        int64_t* local_min = array_int64_min(*(marray + i), *(sizes + i));
 
         if (int64_ptr_min(local_min, min) == local_min){
             min = local_min;
